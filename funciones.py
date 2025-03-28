@@ -171,7 +171,7 @@ def get_next_audio_frame(stream, frame_length):
     return pcm
 
 def recognice_word():
-    access_key = 'FY82ecHQz/KjhVocJbylShM5Uv6pvoDQtz/6UXIYifUE0lpZMW03uw=='
+    access_key = '//api key here'
     porcupine = pvporcupine.create(
         access_key=access_key,
         keywords=['picovoice', 'jarvis']
