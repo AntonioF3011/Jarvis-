@@ -1,0 +1,27 @@
+[project]
+name = "asistente-jarvis"
+version = "0.1.0"
+description = "Asistente virtual con reconocimiento de voz, integración con APIs (OpenAI, ElevenLabs), control de aplicaciones y automatización."
+authors = [
+  { name="Tu Nombre", email="tunombre@correo.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+  "openai",
+  "elevenlabs",
+  "python-dotenv",
+  "SpeechRecognition",
+  "pyaudio",
+  "opencv-python",
+  "pywhatkit",
+  "pygame",
+  "keyboard",
+  "pvporcupine",
+  "pycaw",
+  "psutil",
+  "comtypes"
+]
+
+[tool.setuptools]
+packages = ["."]
+include-package-data = true
