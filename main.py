@@ -2,7 +2,7 @@ import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from funciones import recognice_audio_as_text,recognice_word,is_incomplete_sentence, search_online, establecer_volumen, pausar_continuar_video
 import speech_recognition as sr
-from funciones import play_audio, date_and_time, tomar_foto, chatgpt, conversation_with_assistant, enviar_whatsapp, abrir_copilot, abrir_netflix, bajar_volumen_a_cero, restaurar_volumen, detener_reproduccion
+from funciones import play_audio, date_and_time, tomar_foto, chatgpt, conversation_with_assistant, abrir_copilot, abrir_netflix, bajar_volumen_a_cero, restaurar_volumen, detener_reproduccion
 import keyboard
 
 
