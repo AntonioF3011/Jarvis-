@@ -77,9 +77,6 @@ if __name__ == "__main__":
                     abrir_netflix()
                 elif texto == 'cierra app': 
                     keyboard.press_and_release('ctrl+w')
-                elif texto.startswith('whatsapp'): 
-                    palabras = texto.split()
-                    enviar_whatsapp(palabras[1])
                 elif texto.startswith('analizalaimagen'):
                     audio_nuevo = texto.replace('analizalaimagen', '')
                     chatgpt(audio=audio_nuevo,imagen=True)
