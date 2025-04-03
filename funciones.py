@@ -458,56 +458,9 @@ def establecer_volumen(nivel):
     volume.SetMasterVolumeLevelScalar(nivel_escalar, None)
     print(f"Volumen establecido en {nivel}%")
 
-#verifica si ya esta en ejecucion 
-def verificar_spotify_abierto():
-    # Iterar sobre todos los procesos en ejecución
-    for proceso in psutil.process_iter(['name']):
-        try:
-            # Verificar si el nombre del proceso es "Spotify.exe"
-            if proceso.info['name'] and 'Spotify' in proceso.info['name']:
-                #si esta abierto returnea True
-                return True
-        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
-            pass
-    #false si esta cerrado
-    return False
-
-# def buscar_cancion_spotify(cancion): 
-#     entrar_spotify()
-#     #verifica si el proceso ya estaba antes en ejecucion 
-#     if verificar_spotify_abierto(): 
-#         time.sleep(0.5)
-#     else: 
-#         time.sleep(7)
-#     keyboard.press_and_release('ctrl+k')
-#     time.sleep(0.5)
-#     keyboard.press_and_release('ctrl+a')
-#     time.sleep(0.5)
-#     keyboard.press_and_release('ctrl+delete')
-#     time.sleep(1)
-#     keyboard.write(cancion)
-#     time.sleep(5)
-#     keyboard.press_and_release('shift+enter')
-#     time.sleep(1)
-#     keyboard.press_and_release('enter')
-#     time.sleep(1)
-
-
-def detener_reproduccion(): 
-    if verificar_spotify_abierto():
-        entrar_spotify()
-        time.sleep(1)
-        keyboard.press_and_release('spacebar')
-        time.sleep(1)
 
 #pausar o continuar video: 
 def pausar_continuar_video(): 
     keyboard.press_and_release('k')
     time.sleep(1)
-#escribe spotify y enter en la barra de comandos 
-def entrar_spotify(): 
-    keyboard.press_and_release('win+s')
-    time.sleep(1)
-    keyboard.write('spotify')
-    time.sleep(1)
-    keyboard.press_and_release('enter')
+
