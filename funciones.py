@@ -270,23 +270,6 @@ def play_audio(subfolder, aleatorio=True, contexto=""):
             continue
 
 
-def enviar_whatsapp(persona):
-    if persona not in variables_gobales.contactos: 
-        play_audio("otros",contexto="no esta en contactos",aleatorio=False)
-        return 
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        # Ajustar para el ruido ambiental
-        recognizer.adjust_for_ambient_noise(source)
-        recognizer.pause_threshold = 1.9
-        play_audio("otros",contexto="preguntar mensaje",aleatorio=False)
-        audio = recognizer.listen(source, phrase_time_limit=None)
-        mensaje = recognice_audio_as_text(audio, recognizer)
-    kit.sendwhatmsg_instantly(variables_gobales.contactos[persona], mensaje,15, close_time= 3, tab_close=True) 
-    play_audio("otros",contexto="mensaje enviado",aleatorio=False)
-
-
-
 client = OpenAI()
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
