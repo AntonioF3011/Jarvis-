@@ -1,5 +1,5 @@
 [project]
-name = "asistente-jarvis"
+name = "asistente"
 version = "0.1.0"
 description = "Asistente virtual con reconocimiento de voz, integración con APIs (OpenAI, ElevenLabs), control de aplicaciones y automatización."
 requires-python = ">=3.8"
@@ -20,5 +20,15 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["."]
+packages = ["asistente"]
 include-package-data = true
+
+[tool.setuptools.package-data]
+"asistente_jarvis" = [
+  "static/*, 
+  "templates/*
+]
+
+[build-system]
+requires = ["setuptools","wheel"] 
+build-backend = "setuptools.build_meta"
